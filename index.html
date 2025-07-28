@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Darío Quintero</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&family=Fjalla+One&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+    header {
+      position: relative;
+      height: 60vh;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background-size: cover;
+      background-position: center;
+      animation: slideShow 20s infinite;
+      z-index: -1;
+    }
+    @keyframes slideShow {
+      0% { background-image: url('pexels-pixabay-236698.jpg'); }
+      33% { background-image: url('pexels-tomfisk-2226458.jpg'); }
+      66% { background-image: url('pexels-pixabay-236698.jpg'); }
+      100% { background-image: url('pexels-tomfisk-2226458.jpg'); }
+    }
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+      font-family: 'Fjalla One', sans-serif;
+    }
+    header p {
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+    section {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: #1a1a1a;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.6);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    section:hover {
+      transform: scale(1.01);
+      box-shadow: 0 0 10px rgba(138, 180, 248, 0.7);
+    }
+    h2 {
+      color: #8ab4f8;
+      border-bottom: 1px solid #2c2c2c;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+      font-family: 'Fjalla One', sans-serif;
+    }
+    .grid-experience, .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    .experience-box, .box {
+      padding: 2rem;
+      background-size: cover;
+      background-position: center;
+      border-radius: 10px;
+      color: #fff;
+      text-shadow: 1px 1px 2px black;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .experience-box:hover, .box:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px rgba(138, 180, 248, 0.7);
+    }
+    .experience-box ul, .box ul {
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .experience-box:hover ul, .box:hover ul {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    ul {
+      list-style: none;
+      padding-left: 1rem;
+    }
+    li::before {
+      content: "\2022 ";
+      color: #8ab4f8;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+    a {
+      color: #8ab4f8;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #1f1f1f;
+      color: #888;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Darío Quintero</h1>
+      <p>Líder en EAM, Proyectos IT & Logística</p>
+    </div>
+  </header>
+
+  <section>
+    <h2>Experiencia</h2>
+    <div class="grid-experience">
+      <div class="experience-box" style="background-image: url('Presente.jpg');">
+        <h3>Pasado</h3>
+        <ul>
+          <li><strong>Andreani:</strong> Desde 2022 liderando múltiples proyectos estratégicos en el área de Evolución y Mantenimiento (EAM)</li>
+        </ul>
+      </div>
+      <div class="experience-box" style="background-image: url('Pasado.jpg');">
+        <h3>Presente</h3>
+        <ul>
+          <li><strong>SAF Logística:</strong> Responsable de administración</li>
+          <li><strong>Carrefour Argentina:</strong> Responsable WMS - Infolog</li>
+          <li><strong>Frávega:</strong> Líder de Aplicaciones Logísticas</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="box" style="background-image: url('Duras.jpg');">
+        <h3>Habilidades Duras</h3>
+        <ul>
+          <li>SQL, Power BI, Python, Jira, Trello, Postman</li>
+          <li>Integración de sistemas (EAM, WMS, TMS)</li>
+          <li>Automatización de procesos</li>
+        </ul>
+      </div>
+      <div class="box" style="background-image: url('Blandas.jpg');">
+        <h3>Habilidades Blandas</h3>
+        <ul>
+          <li>Liderazgo de equipos distribuidos</li>
+          <li>Manejo de Metodologías Ágiles</li>
+          <li>Gestión de tiempo</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Proyectos destacados</h2>
+    <div class="box" style="background-image: url('Brujula.jpg');">
+      <ul>
+        <li>Seguimiento digital de activos</li>
+        <li>Proyecto NIC - Carrefour</li>
+        <li>Automatización de OT preventivas + Dashboards</li>
+        <li>Calibraciones de equipos</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Educación</h2>
+    <div class="box" style="background-image: url('puente.jpg');">
+      <ul>
+        <li>Licenciatura en Logística – UNDEF (en curso)</li>
+        <li>Postgrado en Logística – UBA</li>
+        <li>Diplomatura en Base de Datos – UTN</li>
+        <li>Certificación Project Manager – Google</li>
+        <li>Certificación Data Science – IBM</li>
+        <li>Certificación Product Manager – CoderHouse</li>
+        <li>Técnico Superior en Programación-Teclab</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Contacto</h2>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/qdario1986" target="_blank">/qdario1986</a></p>
+    <p>Email: dario.quintero22101986@gmail.com</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Darío Quintero</p>
+  </footer>
+</body>
+</html>
